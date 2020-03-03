@@ -19,17 +19,10 @@ namespace fiapweb2020.ViewComponents
 
         public async Task<IViewComponentResult> InvokeAsync(int totalDeNoticias, bool noticiasUrgents)
         {
-
-
             var view = noticiasUrgents ? "noticiasUrgentes" : "noticias";
 
             //await Task.Delay(200);
-
-          
-
             return View(view, _service.Load(totalDeNoticias));
         }
-
-       
     }
 }

@@ -12,17 +12,12 @@ namespace fiapweb2020.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-
-
             return View("CreateClientes");
         }
         [HttpPost]
         public IActionResult Create(Cliente cliente)
         {
-
-
             return View("CreateClientes");
-
         }
     }
 }

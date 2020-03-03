@@ -8,25 +8,20 @@ using System.Threading.Tasks;
 
 namespace fiapweb2020.Controllers
 {
-    public class HomeController: Controller
+    public class HomeController : Controller
     {
+        private INoticiaService _noticiaService;
 
-        public HomeController(INoticiaService noticia)
+        public HomeController(INoticiaService noticiaService)
         {
-
+            _noticiaService = noticiaService;
         }
+
+
         //public ActionResult Index()
         //public ViewResult Index()
-
-        public IActionResult Teste()
-        {
-
-         
-            return View();
-        }
         public IActionResult Index()
         {
-
             ViewData["Nome"] = "Anderson";
             ViewBag.NomeDaAula = "ASP.NET";
 
@@ -44,14 +39,14 @@ namespace fiapweb2020.Controllers
         [HttpPost]
         public string Index(Pessoa pessoa)
         {
-
             return "olá";
         }
 
-        public string NuvemDeTags()
+        public IActionResult Teste()
         {
 
-            return "olá";
+
+            return View();
         }
     }
 }
