@@ -1,4 +1,5 @@
 ﻿using fiapweb2020.Models;
+using fiapweb2020.Services;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -9,8 +10,20 @@ namespace fiapweb2020.Controllers
 {
     public class HomeController: Controller
     {
+
+        public HomeController(INoticiaService noticia)
+        {
+
+        }
         //public ActionResult Index()
         //public ViewResult Index()
+
+        public IActionResult Teste()
+        {
+
+         
+            return View();
+        }
         public IActionResult Index()
         {
 
@@ -30,6 +43,12 @@ namespace fiapweb2020.Controllers
 
         [HttpPost]
         public string Index(Pessoa pessoa)
+        {
+
+            return "olá";
+        }
+
+        public string NuvemDeTags()
         {
 
             return "olá";

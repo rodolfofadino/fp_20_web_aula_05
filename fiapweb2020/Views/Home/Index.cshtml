@@ -1,7 +1,29 @@
 ﻿@model Pessoa
+
+
+@Html.Partial("_Menu")
+
+@await Html.PartialAsync("_Menu")
+
 <h1>Hello @ViewData["Nme"] </h1>
 <h2>@ViewBag.NomeDaAula</h2>
 <h2>@Model.Nome</h2>
 
 <br />
-<img src="~/giphy.webp" /> 
+<img src="~/giphy.webp" />
+
+
+@*@foreach (var item in Model.Produtos)
+{
+    @await Html.PartialAsync("_Detalhe", item)
+
+}*@
+
+
+
+@*@section Footer{ 
+    <div>Meu footer</div>
+}*@
+
+
+<vc:noticias noticias-urgents="true" total-de-noticias="5"></vc:noticias>

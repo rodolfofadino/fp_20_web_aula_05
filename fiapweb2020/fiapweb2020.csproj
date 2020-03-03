@@ -8,6 +8,9 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.ASPNETCore.All" Version="2.2.4" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
+    <PackageReference Include="Serilog" Version="2.9.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="3.2.0" />
+    <PackageReference Include="Serilog.Sinks.Logentries" Version="4.0.0" />
   </ItemGroup>
 
 </Project>
