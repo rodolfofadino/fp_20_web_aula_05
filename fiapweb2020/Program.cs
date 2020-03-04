@@ -1,9 +1,11 @@
-﻿using fiapweb2020.Middlewares;
+﻿using fiapweb2020.Contexts;
+using fiapweb2020.Middlewares;
 using fiapweb2020.Services;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Localization;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace fiapweb2020
@@ -37,7 +39,8 @@ namespace fiapweb2020
             //services.AddScoped<INoticiaService, NoticiaService>();
             services.AddSingleton<INoticiaService, NoticiaService>();
 
-
+            services.AddDbContext<ClienteContext>(o=>o.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=EFGetStarted.AspNetCore.Fiap;Trusted_Connection=True;ConnectRetryCount=0"));
+            
             services.AddMvc();
 
         }
