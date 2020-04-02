@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace fiapweb2020.Models
+namespace fiapweb2020.core.Models
 {
 
     //[Table("NomeDaTabelaDeClientes")]

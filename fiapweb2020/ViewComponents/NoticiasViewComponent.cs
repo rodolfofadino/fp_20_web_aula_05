@@ -1,5 +1,5 @@
-﻿using fiapweb2020.Models;
-using fiapweb2020.Services;
+﻿using fiapweb2020.core.Models;
+using fiapweb2020.core.Services;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;

@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29411.108
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fiapweb2020", "fiapweb2020\fiapweb2020.csproj", "{7A57AEDD-7D65-407B-BA4C-B1B246088F87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "fiapweb2020", "fiapweb2020\fiapweb2020.csproj", "{7A57AEDD-7D65-407B-BA4C-B1B246088F87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fiapweb2020.core", "fiapweb2020.core\fiapweb2020.core.csproj", "{DCB0EFEA-34A9-4397-8E27-35EE769DE4EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{7A57AEDD-7D65-407B-BA4C-B1B246088F87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A57AEDD-7D65-407B-BA4C-B1B246088F87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A57AEDD-7D65-407B-BA4C-B1B246088F87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCB0EFEA-34A9-4397-8E27-35EE769DE4EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCB0EFEA-34A9-4397-8E27-35EE769DE4EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCB0EFEA-34A9-4397-8E27-35EE769DE4EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCB0EFEA-34A9-4397-8E27-35EE769DE4EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

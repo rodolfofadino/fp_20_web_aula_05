@@ -1,6 +1,6 @@
-﻿using fiapweb2020.Contexts;
+﻿using fiapweb2020.core.Contexts;
 using fiapweb2020.Middlewares;
-using fiapweb2020.Services;
+using fiapweb2020.core.Services;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;

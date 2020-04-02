@@ -1,4 +1,4 @@
-﻿namespace fiapweb2020.Models
+﻿namespace fiapweb2020.core.Models
 {
     public class Noticia
     {

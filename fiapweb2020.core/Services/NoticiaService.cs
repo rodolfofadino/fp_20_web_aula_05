@@ -1,8 +1,8 @@
-﻿using fiapweb2020.Models;
+﻿using fiapweb2020.core.Models;
 using System;
 using System.Collections.Generic;
 
-namespace fiapweb2020.Services
+namespace fiapweb2020.core.Services
 {
     public class NoticiaService : INoticiaService
     {

@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using fiapweb2020.Contexts;
-using fiapweb2020.Models;
+using fiapweb2020.core.Contexts;
+using fiapweb2020.core.Models;
 
 namespace fiapweb2020.Controllers
 {

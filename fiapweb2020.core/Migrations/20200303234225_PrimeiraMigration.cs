@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace fiapweb2020.Migrations
+namespace fiapweb2020.core.Migrations
 {
     public partial class PrimeiraMigration : Migration
     {
