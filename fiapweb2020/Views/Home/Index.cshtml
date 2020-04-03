@@ -6,7 +6,7 @@
 <h1>Hello @ViewData["Nme"] </h1>
 <h2>@ViewBag.NomeDaAula</h2>
 <h2>@Model.Nome</h2>
- 
+
 <email mail-to="cadu"></email>
 
 <br />
@@ -14,16 +14,27 @@
 
 
 @*@foreach (var item in Model.Produtos)
-{
-    @await Html.PartialAsync("_Detalhe", item)
+    {
+        @await Html.PartialAsync("_Detalhe", item)
 
-}*@
+    }*@
 
 
 
-@*@section Footer{ 
-    <div>Meu footer</div>
-}*@
+@*@section Footer{
+        <div>Meu footer</div>
+    }*@
 
 
 <vc:noticias noticias-urgents="true" total-de-noticias="5"></vc:noticias>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script type="text/javascript">
+       $.get("https://localhost:5001/api/clientes/", function (data, status) {
+        console.log("Data: " + data);
+    });
+</script>

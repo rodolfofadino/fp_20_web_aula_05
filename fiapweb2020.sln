@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "fiapweb2020", "fiapweb2020\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fiapweb2020.core", "fiapweb2020.core\fiapweb2020.core.csproj", "{DCB0EFEA-34A9-4397-8E27-35EE769DE4EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fiapweb2020.api", "fiapweb2020.api\fiapweb2020.api.csproj", "{9447F07E-DF53-4640-A212-A2AA29501B01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{DCB0EFEA-34A9-4397-8E27-35EE769DE4EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCB0EFEA-34A9-4397-8E27-35EE769DE4EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCB0EFEA-34A9-4397-8E27-35EE769DE4EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9447F07E-DF53-4640-A212-A2AA29501B01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9447F07E-DF53-4640-A212-A2AA29501B01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9447F07E-DF53-4640-A212-A2AA29501B01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9447F07E-DF53-4640-A212-A2AA29501B01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -19,5 +19,13 @@ namespace fiapweb2020.core.Models
         [Required]
         public string Nome { get; set; }
         public int Idade { get; set; }
+        
+        //public Status Status { get; set; }
     }
+
+    //public class Status
+    //{
+    //    [Required]
+    //    public string Descricao { get; set; }
+    //}
 }
