@@ -1,0 +1,58 @@
+/*
+This is an example of how to use the image sprite in your own CSS files
+*/
+.paises {
+	background-image: url('paises.sprite.png');
+	background-repeat: no-repeat;
+	display: inline-block;
+}
+.paises.alemanha {
+	width: 218px;
+	height: 124px;
+	background-position: -10px -10px;
+}
+.paises.argentina {
+	width: 168px;
+	height: 99px;
+	background-position: -10px -144px;
+}
+.paises.brasil {
+	width: 207px;
+	height: 121px;
+	background-position: -10px -253px;
+}
+.paises.canada {
+	width: 157px;
+	height: 116px;
+	background-position: -10px -384px;
+}
+.paises.espanha {
+	width: 211px;
+	height: 137px;
+	background-position: -10px -510px;
+}
+.paises.eua {
+	width: 170px;
+	height: 93px;
+	background-position: -10px -657px;
+}
+.paises.grecia {
+	width: 165px;
+	height: 112px;
+	background-position: -10px -760px;
+}
+.paises.italia {
+	width: 168px;
+	height: 110px;
+	background-position: -10px -882px;
+}
+.paises.japao {
+	width: 177px;
+	height: 115px;
+	background-position: -10px -1002px;
+}
+.paises.portugal {
+	width: 222px;
+	height: 142px;
+	background-position: -10px -1127px;
+}

@@ -11,6 +11,7 @@ a.navbar-brand {
 -------------------------------------------------- */
 html {
     font-size: 14px;
+    background-color:#ffd222;
 }
 
 @media (min-width: 768px) {

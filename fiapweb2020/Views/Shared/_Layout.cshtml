@@ -4,15 +4,21 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-    <link href="~/css/jcarousel.basic.css" rel="stylesheet" />
-    <link rel="stylesheet" href="~/css/site.css" />
 
-    <script src="~/lib/jquery/dist/jquery.js"></script>
 
-    <script src="~/js/jquery.jcarousel.js"></script>
-    <script src="~/js/site.js"></script>
+    <environment include="Development">
+        <link href="~/css/jcarousel.basic.css" rel="stylesheet" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="~/images/paises.sprite.css" />
+    </environment>
+    <environment exclude="Development">
+        <link href="~/css/bundle.min.css" rel="stylesheet" asp-append-version="true" />
+    </environment>
+
+
+
+
 
 </head>
 <body>
@@ -20,7 +26,7 @@
     <header>
         @*@Html.Partial("_Menu")
 
-        @await Html.PartialAsync("_Menu")*@
+            @await Html.PartialAsync("_Menu")*@
 
         <partial name="_menu" />
     </header>
@@ -36,6 +42,11 @@
     </footer>
     @RenderSection("Footer", required: false)
 
-  
+
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/js/jquery.jcarousel.js"></script>
+    <script src="~/js/jquery.lazy.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
 </body>
 </html>
