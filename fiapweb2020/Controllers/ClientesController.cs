@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using fiapweb2020.core.Contexts;
 using fiapweb2020.core.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace fiapweb2020.Controllers
 {
+    [Authorize(Roles ="admin")]
     public class ClientesController : Controller
     {
         private readonly ClienteContext _context;
@@ -22,6 +24,8 @@ namespace fiapweb2020.Controllers
         // GET: Clientes
         public async Task<IActionResult> Index()
         {
+            //User.Identity.Name
+
             return View(await _context.Clientes.ToListAsync());
         }
 

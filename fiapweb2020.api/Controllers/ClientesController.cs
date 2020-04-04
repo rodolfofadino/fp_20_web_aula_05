@@ -1,5 +1,7 @@
-﻿using fiapweb2020.core.Contexts;
+﻿using fiapweb2020.api.Custom;
+using fiapweb2020.core.Contexts;
 using fiapweb2020.core.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -9,6 +11,8 @@ using System.Threading.Tasks;
 
 namespace fiapweb2020.api.Controllers
 {
+    //[CustomAuthorize]
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     [EnableCors("default")]

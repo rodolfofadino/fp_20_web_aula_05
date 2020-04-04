@@ -1,7 +1,9 @@
 ﻿@model fiapweb2020.core.Models.Pessoa
 
-
-
+    <h1>
+        @*@Html.Raw(ViewData["Nome"])*@
+        @ViewData["Nome"]
+    </h1>
 <div class="row">
     <div id="carroseul" class="col">
         <div class="jcarousel-wrapper">

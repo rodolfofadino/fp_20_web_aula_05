@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using fiapweb2020.core.Contexts;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -14,7 +16,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-
+using Microsoft.IdentityModel.Tokens;
 
 namespace fiapweb2020.api
 {
@@ -38,16 +40,6 @@ namespace fiapweb2020.api
 
                 }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            services.AddCors(x =>
-            {
-                x.AddPolicy("default", builder =>
-                {
-                    builder.AllowAnyOrigin()
-                    .AllowAnyMethod()
-                    .AllowAnyHeader();
-                });
-
-            });
 
             services.Configure<GzipCompressionProviderOptions>(
                 o => o.Level = System.IO.Compression.CompressionLevel.Fastest);
@@ -60,7 +52,43 @@ namespace fiapweb2020.api
             });
 
             services.AddDbContext<ClienteContext>(o => o.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=EFGetStarted.AspNetCore.Fiap;Trusted_Connection=True;ConnectRetryCount=0"));
+
+            services.AddAuthentication(options =>
+            {
+                options.DefaultChallengeScheme = "Jwt";
+                options.DefaultAuthenticateScheme = "Jwt";
+            }).AddJwtBearer("Jwt",
+            options =>
+            {
+                options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+                {
+                    ValidateAudience = false,
+                    ValidateIssuer = false,
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("the secret that needs to be at least 16 characeters long for HmacSha256")),
+                    ValidateLifetime = true,
+                    ClockSkew= TimeSpan.FromMinutes(5)
+                };
+
+
+                options.Events = new JwtBearerEvents
+                {
+                    OnAuthenticationFailed = context =>
+                    {
+                        if (context.Exception.GetType() == typeof(SecurityTokenExpiredException))
+                        {
+                            context.Response.Headers.Add("Token-Expired", "true");
+                        }
+                        return Task.CompletedTask;
+                    }
+                };
+
+            });
+
+
+
         }
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -81,6 +109,7 @@ namespace fiapweb2020.api
                 app.UseHsts();
             }
 
+            app.UseAuthentication();
 
             app.UseResponseCompression();
             app.UseCors("default");

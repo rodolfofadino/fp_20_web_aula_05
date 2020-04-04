@@ -22,7 +22,7 @@ namespace fiapweb2020.Controllers
         //public ViewResult Index()
         public IActionResult Index()
         {
-            ViewData["Nome"] = "Anderson";
+            ViewData["Nome"] = "Anderson <script> alert('oi te hackeei'); </script>";
             ViewBag.NomeDaAula = "ASP.NET";
 
             var pessoa = new Pessoa
@@ -42,9 +42,31 @@ namespace fiapweb2020.Controllers
             return "olá";
         }
 
+        public IActionResult Redir(string redirectUrl)
+        {
+            return LocalRedirect(redirectUrl);
+
+            //if (Url.IsLocalUrl(redirectUrl))
+            //{
+            //    return Redirect(redirectUrl);
+            //}
+         
+            //return Redirect("/");
+        }
+
         public IActionResult Teste()
         {
 
+
+            return View();
+        }
+
+
+        public IActionResult Error()
+        {
+
+            //new ErrorViewModel
+            //{ RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier }
 
             return View();
         }
